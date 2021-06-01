@@ -1,0 +1,45 @@
+.directory {
+  .wrap {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  .item {
+    width: 50%;
+    float: left;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      // darken the image a litte bit:
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    a {
+      background: white;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      --webit-transform: translate(-50%, -50%);
+      --moz-transform: translate(-50%, -50%);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      border: 1px solid black;
+    }
+  }
+}
