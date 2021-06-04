@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Registration from './pages/registration';
 import Homepage from './pages/homepage';
 import Login from './pages/Login';
+import Recovery from './pages/Recovery';
 
 //layouts
 import MainLayout from './layouts/MainLayout';
@@ -88,6 +89,14 @@ class App extends React.Component {
                   </MainLayout>
                 )
               }
+            ></Route>
+            <Route
+              path="/recovery"
+              render={() => (
+                <MainLayout>
+                  <Recovery />
+                </MainLayout>
+              )}
             ></Route>
           </Switch>
         </div>
